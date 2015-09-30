@@ -25,7 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)testButtonTapped:(id)sender {
-    self.testLabel.text = @"It worked!";
+    int height_feet = 5;
+    int height_inches = 11;
+    double height_cm = ((height_feet * 12.0) * height_inches) * 2.54;
+    
+    self.testLabel.text = [NSString stringWithFormat:@"%f",height_cm];
 }
 
 @end
